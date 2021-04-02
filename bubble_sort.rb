@@ -2,6 +2,7 @@ def bubble_sort(array)
   array.each do
     Array(0..array.length - 2).each do |j|
       next unless array[j] > array[j + 1]
+
       swap = array[j + 1]
       array[j + 1] = array[j]
       array[j] = swap
@@ -15,7 +16,8 @@ print array
 def bubble_sort_by(array)
   array.each do
     Array(0..array.length - 2).each do |j|
-      next unless yield(array[j], array[j + 1]) > 0
+      next unless yield(array[j], array[j + 1]).positive?
+
       swap = array[j + 1]
       array[j + 1] = array[j]
       array[j] = swap
