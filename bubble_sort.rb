@@ -1,7 +1,7 @@
 def bubble_sort(array)
-  size = array.length()
-    for i in 0..size-1 do
-      for j in 0..size-2 do
+  size = array.length
+    for i in 0..size - 1 do
+      for j in 0..size - 2 do
         print "i=", array[i],"j=",array[j],"\n";
           if array[j]>array[j+1]
             swap = array[j+1]
@@ -20,9 +20,9 @@ print array
 
 
 def bubble_sort_by(array)
-  size=array.length()
-    for i in 0..size-1 do
-      for j in 0..size-2 do
+  size=array.length
+    for i in 0..size - 1 do
+      for j in 0..size - 2 do
         print "i=", array[i],"j=",array[j],"\n";
           if yield(array[j],array[j+1])>0
             swap = array[j+1]
